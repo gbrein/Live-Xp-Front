@@ -7,7 +7,6 @@ import {
     MDBCardBody,
     MDBInput,
     MDBBtn,
-    MDBIcon,
     MDBModalFooter
 } from 'mdbreact';
 
@@ -48,22 +47,6 @@ class Login extends Component {
                                 <div className="text-center mb-3">
                                     <MDBBtn type="button" color="blue-grey" rounded className="btn-block z-depth-1a">
                                         Sign in
-                                    </MDBBtn>
-                                </div>
-                                <p
-                                    className="font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2">
-
-                                    or Sign in with:
-                                </p>
-                                <div className="row my-3 d-flex justify-content-center">
-                                    <MDBBtn type="button" color="white" rounded className="mr-md-3 z-depth-1a">
-                                        <MDBIcon fab icon="facebook-f" className="blue-text text-center"/>
-                                    </MDBBtn>
-                                    <MDBBtn type="button" color="white" rounded className="mr-md-3 z-depth-1a">
-                                        <MDBIcon fab icon="twitter" className="blue-text"/>
-                                    </MDBBtn>
-                                    <MDBBtn type="button" color="white" rounded className="z-depth-1a">
-                                        <MDBIcon fab icon="google-plus-g" className="blue-text"/>
                                     </MDBBtn>
                                 </div>
                             </MDBCardBody>

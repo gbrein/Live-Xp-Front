@@ -13,33 +13,12 @@ class Header extends Component {
                                 type="text"
                                 placeholder="Aulas"
                                 aria-label="Search"/>
-                                <MDBBtn color="unique" rounded size="sm" type="submit" className="mr-auto">
-                                Buscar
-                            </MDBBtn>
-                        </div>
-                        <div className="d-flex justify-content-around">
-                            <input
-                                className="form-control mr-sm-2"
-                                type="text"
-                                placeholder="CEP"
-                                aria-label="Search"/>
-                                <MDBBtn color="unique" rounded size="sm" type="submit" className="mr-auto">
-                                Buscar
-                            </MDBBtn>
-                        </div>
-                        <div className="d-flex justify-content-around">
-                            <input
-                                className="form-control mr-sm-2"
-                                type="text"
-                                placeholder="Bairro"
-                                aria-label="Search"/>
                             <MDBBtn color="unique" rounded size="sm" type="submit" className="mr-auto">
-                            Buscar
+                                Buscar
                             </MDBBtn>
                         </div>
                     </MDBFormInline>
                 </MDBCol>
-                
             </div>
         )
     }

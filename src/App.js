@@ -9,7 +9,7 @@ import Login from './views/Login';
 import Logout from './views/Logout';
 import axios from 'axios';
 
-const http = axios.create({baseURL: 'http://127.0.0.1:3000/Escolas'})
+const http = axios.create({baseURL: 'http://127.0.0.1:3000/Schools'})
 
 class App extends Component {
     constructor() {
