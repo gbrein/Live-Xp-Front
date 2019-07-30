@@ -8,20 +8,21 @@ import {
     MDBCardText,
 } from 'mdbreact';
 
-function Card() {
+function Card(props) {
+    const {data} = props;
+    console.log(data)
     return ( <> <MDBCard className="each-card d-flex mr-auto justify-content-around" style={{
         width: "20rem"    }}>
-        <MDBCardImage
+        <MDBCardImage 
             className="img-fluid"
-            src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg"
+            src={data.imgLink}
             waves/>
         <MDBCardBody>
-            <MDBCardTitle>Card title</MDBCardTitle>
+            <MDBCardTitle>{data.nome}</MDBCardTitle>
             <MDBCardText>
-                Some quick example text to build on the card title and make up the bulk of the
-                card&apos;s content.
+                {data.descricao}
             </MDBCardText>
-            <MDBBtn href="#">MDBBtn</MDBBtn>
+            <MDBBtn href="#">Ver Mais</MDBBtn>
         </MDBCardBody>
     </MDBCard> < />
  )

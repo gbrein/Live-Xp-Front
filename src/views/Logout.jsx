@@ -1,18 +1,18 @@
-import React, {Component} from 'react';
-import Header from '../Components/Header';
-import Place from '../Components/Place';
+import React, {Component, Redirect} from 'react';
+
 
 class Logout extends Component {
 
+    componentWillMount(){
+     const {action} = this.props;
+     console.log(action)
+    }
+
     render() {
         return (
-            <div className="home-containeer">
-                <div className="mx-auto justify-content-center">
-                    <Header/>
-                    <hr className="my-2"/>
-                    <Place/>
-                </div>
-            </div>
+            <>
+            </>
+
         )
     }
 }

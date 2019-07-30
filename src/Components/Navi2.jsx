@@ -45,15 +45,7 @@ class Navi extends Component {
                     </MDBNavbarNav>
                     <MDBNavbarNav right>
                         <MDBNavItem className="menu-right">
-                            <MDBDropdown>
-                                <MDBDropdownToggle nav caret>
-                                    <MDBIcon icon="user"/>
-                                </MDBDropdownToggle>
-                                <MDBDropdownMenu className="dropdown-default">
-                                    <MDBDropdownItem ><Link to="login">Login</Link></MDBDropdownItem>
-                                    <MDBDropdownItem href="">Sign Up</MDBDropdownItem>
-                                </MDBDropdownMenu>
-                            </MDBDropdown>
+                                    <MDBDropdownItem a href = "logout">Logout</MDBDropdownItem>
                         </MDBNavItem>
                     </MDBNavbarNav>
                 </MDBCollapse>

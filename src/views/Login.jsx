@@ -11,7 +11,19 @@ import {
 } from 'mdbreact';
 
 class Login extends Component {
+    constructor(){
+        super();
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange(event) {
+        const {action} = this.props;
+        const value = event.target.value;
+        const id = event.target.id;
+        action(value, id)
+    }
     render() {
+        const {loginData, buttonClick} = this.props;
         return (
             <div className="c-login">
             <MDBContainer className="mx-auto justify-content-center">
@@ -21,31 +33,30 @@ class Login extends Component {
                             <MDBCardBody className="mx-4">
                                 <div className="text-center">
                                     <h3 className="dark-grey-text mb-5">
-                                        <strong>Sign in</strong>
+                                        <strong>Log in</strong>
                                     </h3>
                                 </div>
                                 <MDBInput
-                                    label="Your email"
-                                    group
+                                    label="Username"
                                     type="email"
+                                    id = "username"
+                                    name = "username"
+                                    value = {loginData.username}
                                     validate
+                                    onChange={this.handleChange}
                                     error="wrong"
                                     success="right"/>
                                 <MDBInput
-                                    label="Your password"
-                                    group
+                                    label="Password"
+                                    name = "password"
                                     type="password"
+                                    value = {loginData.password}
+                                    id = "password"
+                                    onChange={this.handleChange}
                                     validate
                                     containerClass="mb-0"/>
-                                <p className="font-small blue-text d-flex justify-content-end pb-3">
-                                    Forgot
-                                    <a href="#!" className="blue-text ml-1">
-
-                                        Password?
-                                    </a>
-                                </p>
                                 <div className="text-center mb-3">
-                                    <MDBBtn type="button" color="blue-grey" rounded className="btn-block z-depth-1a">
+                                    <MDBBtn type="button" color="blue-grey" onClick = {()=> buttonClick()} rounded className="btn-block z-depth-1a">
                                         Sign in
                                     </MDBBtn>
                                 </div>
@@ -63,7 +74,6 @@ class Login extends Component {
                     </MDBCol>
                 </MDBRow>
             </MDBContainer>
-
             </div>
         )
     }
